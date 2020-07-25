@@ -2,8 +2,7 @@
 
 My files from the [Ionic Getting Started](https://app.pluralsight.com/library/courses/ionic-getting-started/table-of-contents) course at Pluralsight
 
-#ionic #javascript #electron #pwa #android-app
-
+Tags: #ionic #javascript #electron #pwa #android-app
 
 ## LawChoice project
 
@@ -33,6 +32,7 @@ ionic serve
 1. Install from [Android Studio Developer Page](https://developer.android.com/studio)
 
 In Android Studio, in the SDK Manager, make sure the following are installed:
+
 * Android SDK Build-Tools
 * Android SDK Command-line Tools
 * Android Emulator
@@ -44,12 +44,13 @@ Copy the SDK directory from the top fo the SDK Manager window.
 Make sure at least one device is installed as an emulator on the AVD emulator.
 
 Add the following to Environment (User or system):
-* ANDROID_SDK_ROOT = <<Path to SDK copied above>>
+
+* ANDROID_SDK_ROOT = {Path to SDK copied above}
 * Add the following to path:
-    * %ANDROID_SDK_ROOT%\cmdline-tools\latest\bin
-    * %ANDROID_SDK_ROOT%\platform-tools
-    * %ANDROID_SDK_ROOT%\emulator
-    * %ANDROID_SDK_ROOT%\build-tools
+  * %ANDROID_SDK_ROOT%\cmdline-tools\latest\bin
+  * %ANDROID_SDK_ROOT%\platform-tools
+  * %ANDROID_SDK_ROOT%\emulator
+  * %ANDROID_SDK_ROOT%\build-tools
 
 To build, cd into ./lawChoice and use: `ionic build`
 

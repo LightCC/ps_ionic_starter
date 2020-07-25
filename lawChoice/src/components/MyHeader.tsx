@@ -7,7 +7,7 @@ const MyHeader: React.FC = () => {
         <IonHeader class="ion-no-border">
             <IonToolbar class="toolbarStyle">
                 <IonButtons slot="start">
-                    <IonButton>About</IonButton>
+                    <IonButton routerLink="/about">About</IonButton>
                 </IonButtons>
                 <IonButtons slot="end">
                     <IonButton>Contact</IonButton>
