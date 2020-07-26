@@ -33,7 +33,7 @@ const LawyerList: React.FC = () => {
                 </IonList>
             </IonContent>
         </IonPage>
-    )
+    );
 
 };
 
