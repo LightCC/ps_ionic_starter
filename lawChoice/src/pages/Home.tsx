@@ -1,23 +1,45 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonPage, IonList, IonItem, IonImg, IonItemGroup, IonLabel } from '@ionic/react';
 import React from 'react';
-import ExploreContainer from '../components/ExploreContainer';
+import MyHeader from '../components/MyHeader'
 import './Home.css';
 
 const Home: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <MyHeader />
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
+        <IonList>
+          <IonItemGroup>
+            <IonItem button routerLink="/lawyerlist">
+              <IonImg src="assets/images/lawyers.jpg" />
+            </IonItem>
+            <IonItem button routerLink="/lawyerlist">
+              <IonLabel class="ion-text-center">
+                LAWYERS
+              </IonLabel>
+            </IonItem>
+          </IonItemGroup>
+          <IonItemGroup>
+            <IonItem button routerLink="/blog">
+              <IonImg src="assets/images/blog.jpg" />
+            </IonItem>
+            <IonItem button routerLink="/blog">
+              <IonLabel class="ion-text-center">
+                Blog
+              </IonLabel>
+            </IonItem>
+          </IonItemGroup>
+          <IonItemGroup>
+            <IonItem button routerLink="/faq">
+              <IonImg src="assets/images/faq.jpg" />
+            </IonItem>
+            <IonItem button routerLink="/faq">
+              <IonLabel class="ion-text-center">
+                FAQ
+              </IonLabel>
+            </IonItem>
+          </IonItemGroup>
+        </IonList>
       </IonContent>
     </IonPage>
   );
