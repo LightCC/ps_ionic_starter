@@ -20,10 +20,10 @@ const Home: React.FC = () => {
             </IonItem>
           </IonItemGroup>
           <IonItemGroup>
-            <IonItem button routerLink="/contact">
+            <IonItem button routerLink="/blog">
               <IonImg src="assets/images/blog.jpg" />
             </IonItem>
-            <IonItem button routerLink="/contact">
+            <IonItem button routerLink="/blog">
               <IonLabel class="ion-text-center">
                 Blog
               </IonLabel>

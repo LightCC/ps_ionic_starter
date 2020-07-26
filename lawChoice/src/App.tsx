@@ -28,11 +28,15 @@ import LawyerList from './pages/LawyerList';
 import LawyerDetail from './pages/LawyerDetail';
 import Faq from './pages/Faq';
 import FaqDetail from './pages/FaqDetail';
+import BlogDetail from './pages/BlogDetail';
+import Blog from './pages/Blog';
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
+        <Route path="/blogpost/:id" component={BlogDetail} exact={true} />
+        <Route path="/blog" component={Blog} exact={true} />
         <Route path="/faqdetail/:id" component={FaqDetail} exact={true} />
         <Route path="/faq" component={Faq} exact={true} />
         <Route path="/lawyerdetail/:id" component={LawyerDetail} exact={true} />
