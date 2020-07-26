@@ -24,11 +24,13 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import LawyerList from './pages/LawyerList';
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
+        <Route path="/lawyerlist" component={LawyerList} exact={true} />
         <Route path="/home" component={Home} exact={true} />
         <Route path="/about" component={About} exact={true} />
         <Route path="/contact" component={Contact} exact={true} />
