@@ -12,7 +12,7 @@ const MyHeader: React.FC = () => {
                 <IonButtons slot="end">
                     <IonButton routerLink="/contact">Contact</IonButton>
                 </IonButtons>
-                <IonImg class="logoImg" src="assets/images/scales.svg" />
+                <IonImg class="logoImg" src="assets/icon/favicon.png" />
                 <IonTitle class="ion-text-center">LawChoice</IonTitle>
             </IonToolbar>
         </IonHeader>
