@@ -1,4 +1,4 @@
-import { IonHeader, IonToolbar, IonButton, IonButtons, IonImg, IonTitle } from "@ionic/react"
+import { IonHeader, IonToolbar, IonButtons, IonImg, IonTitle, IonMenuButton } from "@ionic/react"
 import React from "react"
 import './MyHeader.css'
 
@@ -7,10 +7,7 @@ const MyHeader: React.FC = () => {
         <IonHeader class="ion-no-border">
             <IonToolbar class="toolbarStyle">
                 <IonButtons slot="start">
-                    <IonButton routerLink="/about">About</IonButton>
-                </IonButtons>
-                <IonButtons slot="end">
-                    <IonButton routerLink="/contact">Contact</IonButton>
+                    <IonMenuButton autoHide={false} menu="first" />
                 </IonButtons>
                 <IonImg class="logoImg" src="assets/icon/favicon.png" />
                 <IonTitle class="ion-text-center">LawChoice</IonTitle>

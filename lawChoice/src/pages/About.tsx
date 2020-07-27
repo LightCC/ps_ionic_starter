@@ -1,18 +1,12 @@
-import { IonPage, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonImg, IonContent, IonFooter } from '@ionic/react';
+import { IonPage, IonToolbar, IonTitle, IonImg, IonContent, IonFooter } from '@ionic/react';
 import React from 'react';
+import MyHeader from '../components/MyHeader';
 
 
 const About: React.FC = () => {
     return(
         <IonPage>
-            <IonHeader class="ion-no-border">
-                <IonToolbar>
-                    <IonButtons slot="start">
-                        <IonBackButton />
-                    </IonButtons>
-                    <IonTitle class="ion-text-center">About Us</IonTitle>
-                </IonToolbar>
-            </IonHeader>
+            <MyHeader />
             <IonImg src="assets/images/city.jpg" />
             <IonContent class="ion-padding">
                 <h1>We Create Dreams</h1>

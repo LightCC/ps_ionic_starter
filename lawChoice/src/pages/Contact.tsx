@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { IonHeader, IonToolbar, IonButtons, IonBackButton, IonPage, IonContent, IonAlert, IonList, IonItem, IonInput, IonItemDivider, IonTextarea, IonLabel, IonFooter, IonTitle } from '@ionic/react';
+import { IonToolbar, IonPage, IonContent, IonAlert, IonList, IonItem, IonInput, IonItemDivider, IonTextarea, IonLabel, IonFooter, IonTitle } from '@ionic/react';
 import React from "react";
+import MyHeader from "../components/MyHeader";
 
 
 const Contact: React.FC = () => {
@@ -22,16 +23,7 @@ const Contact: React.FC = () => {
 
     return(
         <IonPage>
-            <IonHeader class="ion-no-border">
-                <IonToolbar>
-                    <IonButtons slot="start">
-                        <IonBackButton />
-                    </IonButtons>
-                    <IonTitle class="ion-text-center">
-                        Contact Us
-                    </IonTitle>
-                </IonToolbar>
-            </IonHeader>
+            <MyHeader />
             <IonContent>
                 <IonAlert 
                     isOpen={messageAlert}
@@ -59,7 +51,7 @@ const Contact: React.FC = () => {
                         </IonTextarea>
                     </IonItem>
                     <IonItemDivider></IonItemDivider>
-                    <IonItem button onClick = {e => {sendMessage()}}>
+                    <IonItem button onClick = {() => {sendMessage()}}>
                         <IonLabel class='ion-text-center'>
                             Send Message
                         </IonLabel>
