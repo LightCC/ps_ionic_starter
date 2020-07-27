@@ -1,9 +1,17 @@
-import { IonContent, IonPage, IonList, IonItem, IonImg, IonItemGroup, IonLabel } from '@ionic/react';
+import { IonContent, IonPage, IonList, IonItem, IonImg, IonItemGroup, IonLabel, useIonViewDidEnter } from '@ionic/react';
 import React from 'react';
 import MyHeader from '../components/MyHeader'
 import './Home.css';
+import { Plugins } from '@capacitor/core';
 
 const Home: React.FC = () => {
+
+  const {Geolocation} = Plugins;
+  const coordinates = Geolocation.getCurrentPosition();
+  useIonViewDidEnter(() => {
+    console.log('Location', coordinates);
+  });
+
   return (
     <IonPage>
       <MyHeader />
