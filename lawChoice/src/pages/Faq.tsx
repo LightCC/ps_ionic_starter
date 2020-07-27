@@ -1,34 +1,40 @@
-import { IonItem, IonIcon, IonLabel, IonPage, IonContent, IonList, IonListHeader } from "@ionic/react";
-import { informationCircleOutline } from 'ionicons/icons';
-import React, { useState } from "react";
-import FaqListing from "./FaqDB";
-import MyHeader from "../components/MyHeader";
-
+import { IonContent, IonPage, IonIcon, IonItem, 
+    IonLabel, IonGrid, IonRow} from '@ionic/react';
+import React, {useState} from 'react';
+import MyHeader from '../components/MyHeader';
+import FaqListing from './FaqDB';
+import {informationCircleOutline} from 'ionicons/icons';
 
 const Faq: React.FC = () => {
     const [faqs] = useState<Array<any>>(FaqListing);
     const faqList = faqs.map((issue) =>
-        <IonItem key={issue.id} button routerLink={issue.path}>
+        <IonRow>
+        <IonItem key={issue.id} button routerLink={issue.path} lines="none">
             <IonIcon slot="start" icon={informationCircleOutline}></IonIcon>
-            <IonLabel>
-                {issue.title}
-            </IonLabel>
+            <IonLabel>{issue.title}</IonLabel>    
         </IonItem>
+        </IonRow>
     );
-
-    return (
+    return(
         <IonPage>
-            <MyHeader />
+            
             <IonContent>
-                <IonList>
-                    <IonListHeader>
-                        <h1>FAQ</h1>
-                    </IonListHeader>
+                <IonGrid fixed={true}>
+                    <MyHeader />
+                        <IonRow>
+                            <IonLabel>
+                                <h1>FAQ</h1>  
+                            </IonLabel>
+                        </IonRow>
                     {faqList}
-                </IonList>
+                
+                </IonGrid>
             </IonContent>
         </IonPage>
     );
+
+
 };
 
 export default Faq;
+
