@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, IonMenu, IonContent, IonList, IonItem, IonLabel } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
+import { IonApp, IonRouterOutlet } from '@ionic/react';
+import { IonReactRouter, IonReactHashRouter } from '@ionic/react-router';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,45 +33,8 @@ import Blog from './pages/Blog';
 
 const App: React.FC = () => (
   <IonApp>
-    <IonMenu side="start" menuId="first" contentId="main">
-      <IonContent>
-        <IonList>
-          <IonItem button routerLink="/home">
-            <IonLabel class="ion-text-center">
-              <strong>LawChoice</strong>
-            </IonLabel>
-          </IonItem>
-          <IonItem button routerLink="/about">
-            <IonLabel class="ion-text-center">
-              ABOUT US
-            </IonLabel>
-          </IonItem>
-          <IonItem button routerLink="/contact">
-            <IonLabel class="ion-text-center">
-              CONTACT US
-            </IonLabel>
-          </IonItem>
-          <IonItem button routerLink="/lawyerlist">
-            <IonLabel class="ion-text-center">
-              LAWYERS
-            </IonLabel>
-          </IonItem>
-          <IonItem button routerLink="/blog">
-            <IonLabel class="ion-text-center">
-              BLOG
-            </IonLabel>
-          </IonItem>
-          <IonItem button routerLink="/faq">
-            <IonLabel class="ion-text-center">
-              FAQ
-            </IonLabel>
-          </IonItem>
-        </IonList>
-      </IonContent>
-    </IonMenu>
-
     <IonReactRouter>
-      <IonRouterOutlet id="main">
+      <IonRouterOutlet>
         <Route path="/blogpost/:id" component={BlogDetail} exact={true} />
         <Route path="/blog" component={Blog} exact={true} />
         <Route path="/faqdetail/:id" component={FaqDetail} exact={true} />
